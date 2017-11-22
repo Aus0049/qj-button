@@ -1,0 +1,38 @@
+{
+  "name": "qj-button",
+  "version": "1.0.0",
+  "description": "QJYD Button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aus0049/qj-button.git"
+  },
+  "keywords": [
+    "React",
+    "Mobile",
+    "Button"
+  ],
+  "author": "Aus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aus0049/qj-button/issues"
+  },
+  "homepage": "https://github.com/Aus0049/qj-button#readme",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.5",
+    "rc-touchable": "^1.2.3",
+    "react": "^15.6.2",
+    "react-dom": "15.x",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
