@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackConfig = {
     name: 'qj-button',
     target: 'web',
-    entry: path.join(__dirname, 'example', 'src', 'index.jsx'),
+    entry: path.join(__dirname, 'example', 'src', 'index.js'),
     output: {
         filename: `[name]_[hash].js`,
         path: path.resolve(__dirname, 'dist')
@@ -45,33 +45,3 @@ const webpackConfig = {
 };
 
 module.exports = webpackConfig;
-
-// module.exports = {
-//     entry: path.join(__dirname, 'example', 'src', 'index.jsx'),
-//     output: {
-//         filename: 'bundle.js'
-//     },
-//     module: {
-//         loaders: [
-//             {
-//                 test: /\.jsx$/,
-//                 loader: 'babel-loader',
-//                 include: [
-//                     path.join(__dirname, 'example')
-//                 ]
-//             },
-//             {
-//                 test: /\.scss/,
-//                 loader: ['css-loader', 'sass-loader'],
-//                 include: [
-//                     path.join(__dirname, 'example')
-//                 ]
-//             }
-//         ]
-//     },
-//     devServer: {
-//         contentBase: path.join(__dirname, 'example')
-//     }
-// }
-//
-// const BASE_CSS_LOADER = 'css?sourceMap&-minimize'
