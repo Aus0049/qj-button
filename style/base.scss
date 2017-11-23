@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+// 公共函数
+
+// 基本颜色属性等
+$viColor: #00b4a5;
+$darkViColor: #009486;
+$linearViColor: linear-gradient(to right, #31D5A1, #00B4A5);
+$lightGray: #ddd;
+$darkGray: #bbb;
+$textGray: #888;
+
+// px2rem并没有自动实现该功能 还是手动加上吧
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+@mixin border-top () {
+  border-top: 2px solid $lightGray;
+}
+
+@mixin border-bottom () {
+  border-bottom: 2px solid $lightGray;
+}
+
+@mixin list-item-bottom-line ($fromLeft: 40px) {
+  content: '';
+  display: block;
+  position: absolute;
+  left: $fromLeft;
+  bottom: 0;
+  width: 100%;
+  @include border-bottom();
+}
+
+// 公共动画库
+// 爆炸进入
+@keyframes BombIn {
+  0% {
+    transform: translate(-50%, -50%, 0) scale(0, 0);
+    -webkit-transform: translate(-50%, -50%, 0) scale(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%, 0) scale(1.2, 1.2);
+    -webkit-transform: translate(-50%, -50%) scale(1.2, 1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+    -webkit-transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+// 翻转
+@keyframes Flop {
+  0% {
+    transform: translate(-50%, -50%) rotateY(90deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(90deg);
+  }
+  33% {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  67% {
+    transform: translate(-50%, -50%) rotateY(-30deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(-30deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(0deg);
+  }
+}
+
+// 从底部滑入
+@keyframes slideInFromBottom {
+  0% {
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+
+// 摇晃
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  15%, 45%, 75% {
+    -webkit-transform: translate(-60%, -50%);
+    transform: translate(-60%, -50%);
+  }
+
+  30%, 60%, 90% {
+    -webkit-transform: translate(-40%, -50%);
+    transform: translate(-40%, -50%);
+  }
+}
+
+// 0-160
+@keyframes scaleIn {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+// 160-0
+@keyframes scaleOut {
+  0% {
+    width: 160px;
+    height: 160px;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+//
+@keyframes turnUp {
+  0% {
+    transform: translate3D(0, -10px, 0) rotateX(90deg);
+  }
+  100% {
+    transform: translate3D(0, -10px, 0) rotateX(0);
+  }
+}
+
+@keyframes turnLeft {
+  0% {
+    transform: translate3D(-10px, 0, 0) rotateY(90deg);
+  }
+  100% {
+    transform: translate3D(-10px, 0, 0) rotateY(0);
+  }
+}
+
+@keyframes turnRight {
+  0% {
+    transform: translate3D(10px, 0, 0) rotateY(90deg);
+  }
+  100% {
+    transform: translate3D(10px, 0, 0) rotateY(0);
+  }
+}
+
+@keyframes turnBottom {
+  0% {
+    transform: translate3D(0, 10px, 0) rotateX(90deg);
+  }
+  100% {
+    transform: translate3D(0, 10px, 0) rotateX(0);
+  }
+}
