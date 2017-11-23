@@ -4,6 +4,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Touchable from 'rc-touchable'
+import '../style/button.scss'
 
 // button 组件
 const Button = (props) => {

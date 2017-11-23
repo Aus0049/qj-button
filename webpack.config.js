@@ -1,55 +1,77 @@
 /**
  * Created by Aus on 2017/11/23.
  */
-var path = require('path');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+const webpackConfig = {
+    name: 'qj-button',
+    target: 'web',
     entry: path.join(__dirname, 'example', 'src', 'index.jsx'),
     output: {
-        filename: 'bundle.js'
+        filename: `[name]_[hash].js`,
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.jsx$/,
-                loader: 'babel-loader',
-                include: [
-                    path.join(__dirname, 'example')
-                ]
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: 'babel-loader',
             },
             {
-                test: /\.scss/,
-                loader: ['css-loader', 'sass-loader'],
-                include: [
-                    path.join(__dirname, 'example')
-                ]
-            }
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: [
+                    'style-loader',
+                    'css-loader?importLoaders=1',
+                    'postcss-loader',
+                    'sass-loader'
+                ],
+            },
         ]
     },
-    devServer: {
-        contentBase: path.join(__dirname, 'example')
-    }
-}
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'example', 'index.html'),
+            hash: false,
+            filename: 'index.html',
+            inject: 'body',
+            minify: {
+                collapseWhitespace: true
+            }
+        })
+    ]
+};
 
-const BASE_CSS_LOADER = 'css?sourceMap&-minimize'
+module.exports = webpackConfig;
 
-// webpackConfig.module.loaders.push({
-//     test: /\.scss$/,
-//     exclude: null,
-//     loaders: [
-//         'style',
-//         BASE_CSS_LOADER,
-//         'postcss',
-//         'sass?sourceMap'
-//     ]
-// })
-// webpackConfig.module.loaders.push({
-//     test: /\.css$/,
-//     exclude: null,
-//     loaders: [
-//         'style',
-//         BASE_CSS_LOADER,
-//         'postcss',
-//         'postcss-loader'
-//     ]
-// })
+// module.exports = {
+//     entry: path.join(__dirname, 'example', 'src', 'index.jsx'),
+//     output: {
+//         filename: 'bundle.js'
+//     },
+//     module: {
+//         loaders: [
+//             {
+//                 test: /\.jsx$/,
+//                 loader: 'babel-loader',
+//                 include: [
+//                     path.join(__dirname, 'example')
+//                 ]
+//             },
+//             {
+//                 test: /\.scss/,
+//                 loader: ['css-loader', 'sass-loader'],
+//                 include: [
+//                     path.join(__dirname, 'example')
+//                 ]
+//             }
+//         ]
+//     },
+//     devServer: {
+//         contentBase: path.join(__dirname, 'example')
+//     }
+// }
+//
+// const BASE_CSS_LOADER = 'css?sourceMap&-minimize'
