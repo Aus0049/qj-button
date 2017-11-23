@@ -1,8 +1,8 @@
 # QJ-Button
 
 react component button
-[![NPM version](https://img.shields.io/npm/v/brick.js.svg?style=flat)](https://www.npmjs.org/package/brick.js)
-[![Build Status](https://travis-ci.org/brick-js/brick.js.svg?branch=master)](https://travis-ci.org/brick-js/brick.js)
+[![NPM version](https://img.shields.io/npm/v/qj-button.svg?style=flat)](https://www.npmjs.org/package/qj-button)
+[![Build Status](https://travis-ci.org/Aus0049/qj-button.svg?branch=master)](https://travis-ci.org/Aus-0049/qj-button)
 
 
 ## Install
