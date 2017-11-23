@@ -36,6 +36,7 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
+    children: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.node]).isRequired,
     prefixCls: React.PropTypes.string, // 前缀class
     type: React.PropTypes.oneOf(['default', 'primary', 'ghost']), // 类型 枚举 有 default（白底黑字） primary（绿底白字） ghost（白底绿字） 三种
     disabled: React.PropTypes.bool, // 是否不可点击 不可点击时 样式会有调整 默认false

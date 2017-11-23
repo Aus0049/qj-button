@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "build": "webpack",
     "dev": "rimraf lib && babel src --watch --copy-files --source-maps --extensions .es6,.es,.js --out-dir lib",
     "compile": "rimraf lib && babel src --copy-files --source-maps --extensions .es6,.es,.js --out-dir lib"
   },
@@ -24,6 +25,10 @@
     "url": "https://github.com/Aus0049/qj-button/issues"
   },
   "homepage": "https://github.com/Aus0049/qj-button#readme",
+  "files": [
+    "dist",
+    "lib"
+  ],
   "dependencies": {
     "classnames": "^2.2.5",
     "rc-touchable": "^1.2.3",

@@ -9,7 +9,7 @@ const webpackConfig = {
     target: 'web',
     entry: path.join(__dirname, 'example', 'src', 'index.js'),
     output: {
-        filename: `[name]_[hash].js`,
+        filename: `[name].js`,
         path: path.resolve(__dirname, 'dist')
     },
     module: {
