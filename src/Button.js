@@ -29,7 +29,7 @@ const Button = (props) => {
             onPress={onClick}
         >
             <a className={cn}>
-                {iconDOM}<span className="zby-button-text">{children}</span>
+                {iconDOM}<span className={`${prefixCls}-text`}>{children}</span>
             </a>
         </Touchable>
     )
@@ -50,7 +50,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-    prefixCls: 'zby-button',
+    prefixCls: 'qj-button',
     type: 'default',
     disabled: false,
     group: false,

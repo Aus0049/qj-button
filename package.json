@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
+    "lib": "./node_modules/.bin/babel src --copy-files --source-maps --extensions .es6,.es,.js --out-dir lib",
     "dev": "rimraf lib && babel src --watch --copy-files --source-maps --extensions .es6,.es,.js --out-dir lib",
     "compile": "rimraf lib && babel src --copy-files --source-maps --extensions .es6,.es,.js --out-dir lib"
   },
