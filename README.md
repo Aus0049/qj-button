@@ -16,11 +16,12 @@ npm install qj-button
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import qjButton from 'qj-button'
+import Button from 'qj-button'
+import 'qj-button/style.css'
 
 const element = document.getElementById('root');
 
-ReactDOM.render(<qjButton>button</qjButton>, element);
+ReactDOM.render(<Button>button</Button>, element);
 ```
 
 ## API
