@@ -2,7 +2,8 @@
   "name": "qj-button",
   "version": "1.0.2",
   "description": "QJYD Button",
-  "main": "./lib/Button",
+  "main": "index.js",
+  "style": "index.css",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
