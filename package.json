@@ -1,6 +1,6 @@
 {
   "name": "qj-button",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "QJYD Button",
   "main": "index.js",
   "style": "index.css",
@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/Aus0049/qj-button#readme",
   "files": [
-    "dist",
-    "lib"
+    "lib",
+    "style.css"
   ],
   "dependencies": {
     "classnames": "^2.2.5",
