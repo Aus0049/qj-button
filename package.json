@@ -1,6 +1,6 @@
 {
   "name": "qj-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QJYD Button",
   "main": "index.js",
   "scripts": {
