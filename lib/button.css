@@ -1,0 +1,143 @@
+@keyframes BombIn {
+  0% {
+    transform: translate(-50%, -50%, 0) scale(0, 0);
+    -webkit-transform: translate(-50%, -50%, 0) scale(0, 0); }
+  50% {
+    transform: translate(-50%, -50%, 0) scale(1.2, 1.2);
+    -webkit-transform: translate(-50%, -50%) scale(1.2, 1.2); }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+    -webkit-transform: translate(-50%, -50%) scale(1, 1); } }
+@keyframes Flop {
+  0% {
+    transform: translate(-50%, -50%) rotateY(90deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(90deg); }
+  33% {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(0deg); }
+  67% {
+    transform: translate(-50%, -50%) rotateY(-30deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(-30deg); }
+  100% {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    -webkit-transform: translate(-50%, -50%) rotateY(0deg); } }
+@keyframes slideInFromBottom {
+  0% {
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    opacity: 0; }
+  100% {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    opacity: 1; } }
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  15%, 45%, 75% {
+    -webkit-transform: translate(-60%, -50%);
+    transform: translate(-60%, -50%); }
+  30%, 60%, 90% {
+    -webkit-transform: translate(-40%, -50%);
+    transform: translate(-40%, -50%); } }
+@keyframes scaleIn {
+  0% {
+    width: 0;
+    height: 0; }
+  100% {
+    width: 160px;
+    height: 160px; } }
+@keyframes scaleOut {
+  0% {
+    width: 160px;
+    height: 160px;
+    opacity: 1; }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0; } }
+@keyframes turnUp {
+  0% {
+    transform: translate3D(0, -10px, 0) rotateX(90deg); }
+  100% {
+    transform: translate3D(0, -10px, 0) rotateX(0); } }
+@keyframes turnLeft {
+  0% {
+    transform: translate3D(-10px, 0, 0) rotateY(90deg); }
+  100% {
+    transform: translate3D(-10px, 0, 0) rotateY(0); } }
+@keyframes turnRight {
+  0% {
+    transform: translate3D(10px, 0, 0) rotateY(90deg); }
+  100% {
+    transform: translate3D(10px, 0, 0) rotateY(0); } }
+@keyframes turnBottom {
+  0% {
+    transform: translate3D(0, 10px, 0) rotateX(90deg); }
+  100% {
+    transform: translate3D(0, 10px, 0) rotateX(0); } }
+.qj-button {
+  display: block;
+  margin: 20px 0;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  text-align: center;
+  line-height: 100px;
+  font-size: 32px;
+  overflow: hidden;
+  clear: both;
+  outline: none;
+  opacity: 1;
+  transition: opacity .5s; }
+  .qj-button.inline {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 20px;
+    height: auto;
+    font-size: 28px;
+    line-height: 50px;
+    vertical-align: middle; }
+  .qj-button.group {
+    margin: 20px 10px;
+    padding: 0 40px;
+    flex: 1; }
+  .qj-button.disabled {
+    background-color: #ddd; }
+    .qj-button.disabled .qj-button-text, .qj-button.disabled .fa {
+      color: #bbb; }
+    .qj-button.disabled.primary {
+      opacity: .5; }
+    .qj-button.disabled.ghost {
+      border-color: #bbb;
+      opacity: .5; }
+      .qj-button.disabled.ghost .qj-button-text, .qj-button.disabled.ghost .fa {
+        color: #bbb; }
+  .qj-button.primary {
+    background-color: #00b4a5;
+    border: none; }
+    .qj-button.primary.qj-button-active {
+      background-color: #009486; }
+    .qj-button.primary .qj-button-text, .qj-button.primary .fa {
+      color: #fff; }
+  .qj-button.ghost {
+    background-color: transparent;
+    border-color: #00b4a5; }
+    .qj-button.ghost.qj-button-active {
+      background-color: #00b4a5; }
+      .qj-button.ghost.qj-button-active .qj-button-text, .qj-button.ghost.qj-button-active .fa {
+        color: #fff; }
+    .qj-button.ghost .qj-button-text, .qj-button.ghost .fa {
+      color: #00b4a5; }
+  .qj-button.qj-button-active {
+    background-color: #ddd; }
+  .qj-button .qj-button-text {
+    display: inline-block;
+    color: #000; }
+  .qj-button .fa {
+    display: inline-block;
+    margin-right: 10px;
+    color: #000; }
+
+/*# sourceMappingURL=button.css.map */

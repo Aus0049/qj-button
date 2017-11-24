@@ -4,7 +4,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Touchable from 'rc-touchable'
-import '../style/button.scss'
+import './button.css'
 
 // button 组件
 const Button = (props) => {
@@ -56,7 +56,7 @@ Button.defaultProps = {
     group: false,
     inline: false,
     loading: false,
-    activeClassName: 'zby-button-active'
+    activeClassName: 'qj-button-active'
 };
 
 export default Button
