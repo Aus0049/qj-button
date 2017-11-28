@@ -11,6 +11,8 @@ react component button
 npm install qj-button
 ```
 
+[![qj-button](https://nodei.co/npm/qj-button.png)](https://npmjs.org/package/qj-button)
+
 ## Usage
 
 ```javascript
